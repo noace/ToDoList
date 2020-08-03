@@ -25,7 +25,7 @@ section {
     float: left;
 }
 
-#input {
+#header_input {
     width: 360px;
     height: 24px;
     float: right;
@@ -35,7 +35,7 @@ section {
     border-radius: 5px;
     padding: 1px 0;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24),
-        0 1px 6px rgba(0, 0, 0, 0.45) inset;
+    0 1px 6px rgba(0, 0, 0, 0.45) inset;
 }
 
 footer {
@@ -65,7 +65,7 @@ span {
     text-decoration: none;
 }
 
-ul,ol,li {
+ul, ol, li {
     padding: 0;
     list-style: none;
 }
@@ -83,7 +83,7 @@ li {
     padding: 0 45px;
     border-radius: 3px;
     border-left: 5px solid #629A9C;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
 }
 
 li input {
@@ -120,6 +120,10 @@ li a {
 ul li {
     border-left: 5px solid #999;
     opacity: 0.5;
+}
+
+button {
+    text-align: right;
 }
 
 
