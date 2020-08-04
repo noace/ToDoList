@@ -6,15 +6,24 @@ class ToDoList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: '',
+            todoItems: [],
+            doneItems: [],
             bool: '',
+            handleCheckBox: null,
+            updateTodoItems: null,
+            updateDoneItems: null,
         };
     }
 
-    getData = (sub_text,sub_bool) => {
+    getData = (todoItems,doneItems, handleCheckBox, updateTodoItems, updateDoneItems) => {
+        console.log(todoItems, 1111);
+        console.log(doneItems, 2222);
         this.setState({
-            text: sub_text,
-            bool: sub_bool
+            todoItems,
+            doneItems,
+            handleCheckBox,
+            updateTodoItems,
+            updateDoneItems,
         });
     };
 
@@ -22,7 +31,14 @@ class ToDoList extends React.Component {
         return (
             <React.Fragment>
                 <HeaderInput getData={this.getData}/>
-                <ToDoAndDone text={this.state.text} bool={this.state.bool}/>
+                <ToDoAndDone
+                    todoItems={this.state.todoItems}
+                    doneItems={this.state.doneItems}
+                    bool={this.state.bool}
+                    handleCheckBox={this.state.handleCheckBox}
+                    updateTodoItems={this.state.updateTodoItems}
+                    updateDoneItems={this.state.updateDoneItems}
+                />
             </React.Fragment>
         );
     }
